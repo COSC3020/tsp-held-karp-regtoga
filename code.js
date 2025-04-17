@@ -21,7 +21,7 @@ function tsp_hk(distance_matrix) {
 
 
 function heldKarp(cities, start, distance_matrix, memo){
-    var key = cities + start;
+    var key = cities.sort() + " divider " + start;
     if (memo[key] != undefined) {
         return memo[key];
     }
