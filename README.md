@@ -48,7 +48,7 @@ is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
 
 The worst case: 
-the initialization function can be ran |v| number of times where |v| is the number of nodes in the graph. (it actually runs |v| + |v| times but only the 2nd |v| has more functioning to do).
+the initialization function can be ran |v| number of times where |v| is the number of nodes in the graph. (it actually runs |v| + |v| times but only the 2nd |v| has more functioning to do). This |v| is only here because it allows us to start at every city.
 
 The actuall function itself worst case runs over every entry in the distance_matrix so |v|. for each of those iterations it tries every possible smaller iteration |v|-1 untill it gets to the base case of 2 where it just returns the distances. so |v| * |v|-1 * |v|-2 *...* 2 $\in n!$
 
