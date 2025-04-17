@@ -4,6 +4,7 @@ function tsp_hk(distance_matrix) {
         cities.push(i);
     }
 
+    //This selects multiple start cites over time. i is the start city.
     var minTour = Infinity;
     for (var i = 0; i < cities.length; i++) {
         var memo = {};
@@ -40,6 +41,7 @@ function heldKarp(cities, start, distance_matrix, memo){
         var city_minus_start = cities.filter(element => element !== start);
 
         for (var i = 0; i < cities.length; i++){
+            //here i pick a new start city that is not the old start city.
             if (cities[i] != start){
                 var distance_from_start_to_city = distance_matrix[start][cities[i]];
                 holderofpaths.push(
