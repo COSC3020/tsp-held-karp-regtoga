@@ -6,8 +6,14 @@ function tsp_hk(distance_matrix) {
 
     //This selects multiple start cites over time. i is the start city.
     var minTour = Infinity;
+
+    //I moved memo out of the loop so that it only clears the cache for every new call
+    //I had thought that you wanted us to clear the cache after every starting position because you said: 
+    //"If you use memoization, make sure that the cache is reset every time the function is called such that multiple calls"
+    //but i interpreted it wrong.
+    var memo = {};
+
     for (var i = 0; i < cities.length; i++) {
-        var memo = {};
         var cost = heldKarp(cities, i, distance_matrix, memo);
         if (cost < minTour) {
             minTour = cost;
