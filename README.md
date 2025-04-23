@@ -59,4 +59,8 @@ The memory complexity is the same as the time compelity of the function because 
 
 I talked to the TA about the complexity and he did the math infront of me showing the 2^|v|.
 
+i guess? I was just present for his presentation in lab:
+here is is work:
+![Ali work](image.png)
+
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
