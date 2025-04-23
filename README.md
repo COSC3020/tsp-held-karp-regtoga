@@ -57,4 +57,6 @@ so in total the worst case complexity of this algorithm is (|v|) * (|v| * 2^|v|)
 
 The memory complexity is the same as the time compelity of the function because every loop terminates in saving a value to the memo list. so memory complexity worst case is $\in |v| * 2^|v|$ 
 
+I talked to the TA about the complexity and he did the math infront of me showing the 2^|v|.
+
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
