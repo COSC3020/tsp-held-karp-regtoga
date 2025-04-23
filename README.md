@@ -50,11 +50,11 @@ reasoning, to this markdown file.
 The worst case: 
 the initialization function can be ran |v| number of times where |v| is the number of nodes in the graph. (it actually runs |v| + |v| times but only the 2nd |v| has more functioning to do). This |v| is only here because it allows us to start at every city.
 
-The actuall function itself worst case runs over every entry in the distance_matrix so |v|. for each of those iterations it tries every possible smaller iteration |v|-1 untill it gets to the base case of 2 where it just returns the distances. so |v| * |v|-1 * |v|-2 *...* 2 $\in n!$
+The actuall function itself worst case runs over every entry in the distance_matrix so |v|. for each of those iterations there are |v| possiblities for which city was last added. so $|v| * 2^|v|$.
 
-so in total the worst case complexity of this algorithm is (|v|) * (|v| * |v|-1 * |v|-2 *...* 2) $\in \Theta n!$
+so in total the worst case complexity of this algorithm is (|v|) * (|v| * 2^|v|) $\in \Theta |v|^2 * 2^|v|$
 
 
-The memory complexity is the same as the time compelity because every loop terminates in saving a value to the memo list. so memory complexity worst case is $\in n!$ 
+The memory complexity is the same as the time compelity of the function because every loop terminates in saving a value to the memo list. so memory complexity worst case is $\in |v| * 2^|v|$ 
 
 I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
