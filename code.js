@@ -50,9 +50,7 @@ function heldKarp(cities, start, distance_matrix, memo){
             //here i pick a new start city that is not the old start city.
             if (cities[i] != start){
                 var distance_from_start_to_city = distance_matrix[start][cities[i]];
-                holderofpaths.push(
-                    heldKarp(city_minus_start, cities[i], distance_matrix, memo) + distance_from_start_to_city
-                );
+                holderofpaths.push(heldKarp(city_minus_start, cities[i], distance_matrix, memo) + distance_from_start_to_city);
             }
         }
 
