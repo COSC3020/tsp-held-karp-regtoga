@@ -46,3 +46,23 @@ Test your new function; I've provided some basic testing code in `code.test.js`.
 What is the worst-case asymptotic time complexity of your implementation? What
 is the worst-case asymptotic memory complexity? Add your answer, including your
 reasoning, to this markdown file.
+
+The worst case: 
+the initialization function can be ran |v| number of times where |v| is the number of nodes in the graph. (it actually runs |v| + |v| times but only the 2nd |v| has more functioning to do). This |v| is only here because it allows us to start at every city.
+
+The actuall function itself worst case runs over every entry in the distance_matrix so |v|. for each of those iterations there are |v| - 1 possiblities for which city was last added. and for any set of cities the program computes solutions for all subsets of the cities. each city can either be in the subset or not, 2 * 2 *...* 2 where is repeated for each city in the input so = 2^|v|.
+
+$|v| * (|v| - 1) * 2^{|v|}$
+
+so in total the worst case complexity of this algorithm is |v| * |v| * 2^|v| $\in \Theta |v|^2 * 2^{|v|}$
+
+
+The memory complexity is the same as the time compelity of the function because every loop terminates in saving a value to the memo list. so memory complexity worst case is $\in |v| * 2^|v|$ 
+
+I talked to the TA about the complexity and he did the math infront of me showing the 2^|v|.
+
+i guess? I was just present for his presentation in lab:
+here is is work:
+![Ali work](image.png)
+
+I certify that I have listed all sources used to complete this exercise, including the use of any Large Language Models. All of the work is my own, except where stated otherwise. I am aware that plagiarism carries severe penalties and that if plagiarism is suspected, charges may be filed against me without prior notice.
